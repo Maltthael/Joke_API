@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+
+<body>
+    <h1>Pagina principal !</h1>
+
+    <form action="/heavy_joke" method="POST">
+        <button type="submit">Piada pesada</button>
+    </form>
+    <form action="/light_joke" method="POST">
+        <button>Piada leve</button>
+    </form>
+
+    <div style="border: 1px black solid rounded-25px;">
+        {% if joke %}
+        <p>{{ joke }}</p>
+        {% endif %}
+
+        {% if punchline %}
+        <p>{{ punchline }}</p>
+        {% endif %}
+    </div>
+
+    <div>
+        {% if setup %}
+        <p>{{ setup }}</p>
+        {% endif %}
+
+        {% if delivery %}
+        <p>{{ delivery }}</p>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>
