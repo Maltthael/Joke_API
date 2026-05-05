@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 
 </head>
 
-<body>
-    <h1>Pagina principal !</h1>
+<body class="fundo">
 
-    <form action="/heavy_joke" method="POST">
-        <button type="submit">Piada pesada</button>
-    </form>
-    <form action="/light_joke" method="POST">
-        <button>Piada leve</button>
-    </form>
+    <div class="button_container">
+        <form action="/heavy_joke" method="POST">
+            <button class="button_one" type="submit">Piada pesada</button>
+        </form>
+        <form action="/light_joke" method="POST">
+            <button class="button_two" type="submit">Piada leve</button>
+        </form>
+    </div>
 
-    <div style="border: 1px black solid rounded-25px;">
+
+    <div class="joke_container">
         {% if joke %}
         <p>{{ joke }}</p>
         {% endif %}
@@ -27,9 +31,9 @@
         {% if punchline %}
         <p>{{ punchline }}</p>
         {% endif %}
-    </div>
 
-    <div>
+
+
         {% if setup %}
         <p>{{ setup }}</p>
         {% endif %}
@@ -40,5 +44,5 @@
     </div>
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>

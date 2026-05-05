@@ -4,7 +4,7 @@ def piadas(tipo="heavy_joke"):
     
     if tipo == "light_joke":
         
-        url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,explicit"
+        url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,explicit"  
     else:
         url = "https://v2.jokeapi.dev/joke/Dark?blacklistFlags="
 
